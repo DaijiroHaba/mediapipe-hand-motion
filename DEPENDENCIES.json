@@ -1,0 +1,137 @@
+{
+  "generated_at": "2026-10-04T04:33:38.057Z",
+  "sources": [
+    {
+      "package": "@mediapipe/tasks-vision",
+      "version": "0.10.21",
+      "source": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/",
+      "acquisition": "read-only copy from existing local app vendor assets",
+      "license": "vendor/LICENSE"
+    },
+    {
+      "package": "hand_landmarker",
+      "version": "float16/1",
+      "source": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task"
+    },
+    {
+      "package": "three",
+      "version": "0.160.1",
+      "source": "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js",
+      "license": "vendor/THREE_LICENSE"
+    },
+    {
+      "package": "jszip",
+      "version": "3.10.1",
+      "source": "https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js",
+      "license": "vendor/JSZIP_LICENSE"
+    },
+    {
+      "package": "lucide-static",
+      "version": "0.468.0",
+      "acquisition": "read-only copy from existing local app vendor/icons",
+      "license": "vendor/icons/LICENSE"
+    }
+  ],
+  "files": [
+    {
+      "path": "models/hand_landmarker.task",
+      "bytes": 7819105,
+      "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1"
+    },
+    {
+      "path": "vendor/icons/camera-off.svg",
+      "bytes": 486,
+      "sha256": "6f4712c9024fa0699f1580926a771f4a77c4f3d13e2fc56997de64ce7d49fd18"
+    },
+    {
+      "path": "vendor/icons/camera.svg",
+      "bytes": 427,
+      "sha256": "89b7493fb7f18b3a303184f9dea61e989521eae4a98349bbaa979a586f063cba"
+    },
+    {
+      "path": "vendor/icons/download.svg",
+      "bytes": 428,
+      "sha256": "f68a21e11115edc0aef51ac6f8f4618e14d2b92055f1cb9f5d670efc696bea85"
+    },
+    {
+      "path": "vendor/icons/LICENSE",
+      "bytes": 880,
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    {
+      "path": "vendor/icons/maximize.svg",
+      "bytes": 446,
+      "sha256": "0864b30f3a6b95b49375c93ad874db47474a56bd2d6276c51e938f0b5e4ade9e"
+    },
+    {
+      "path": "vendor/icons/minimize.svg",
+      "bytes": 446,
+      "sha256": "043ddac5e95b96c443d42d15a4444f70fc24aa57d7642ce7c782bb2644ed5be4"
+    },
+    {
+      "path": "vendor/icons/square.svg",
+      "bytes": 339,
+      "sha256": "c6c07f247abd06d3164a6749e21812da9092908fe0033f8163149b4ee2e31347"
+    },
+    {
+      "path": "vendor/icons/video-off.svg",
+      "bytes": 467,
+      "sha256": "f67d620bacc7a62d74f212545147818a98d95c5cdaf44622b6416a4dad4a3803"
+    },
+    {
+      "path": "vendor/icons/video.svg",
+      "bytes": 427,
+      "sha256": "1b8fa7df8d5021d963a8ce39c4ebcd368df02d1e9d777fc302138c020b09bd22"
+    },
+    {
+      "path": "vendor/jszip.min.js",
+      "bytes": 97630,
+      "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e"
+    },
+    {
+      "path": "vendor/JSZIP_LICENSE",
+      "bytes": 33753,
+      "sha256": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 12331,
+      "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 1272972,
+      "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+    },
+    {
+      "path": "vendor/THREE_LICENSE",
+      "bytes": 1081,
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+    },
+    {
+      "path": "vendor/vision_bundle.mjs",
+      "bytes": 137735,
+      "sha256": "40f4123dfcd75cfa58add046919cc6f52fde66f009ff582997c09ba54c6ba27c"
+    },
+    {
+      "path": "vendor/wasm/vision_wasm_internal.js",
+      "bytes": 204284,
+      "sha256": "4a97e2520ba506c680ecd6ba6acfb146888afa0e2746d57f205352bc6ebb82eb"
+    },
+    {
+      "path": "vendor/wasm/vision_wasm_internal.wasm",
+      "bytes": 9574032,
+      "sha256": "f00ec4731faa23b3e714d00e88d4d10e2df5c0a427d3a2b4ae6e3526fdd14ef7"
+    },
+    {
+      "path": "vendor/wasm/vision_wasm_nosimd_internal.js",
+      "bytes": 204137,
+      "sha256": "927def7b465c51b86e4b3060f93646aca4e27121f4b8fc0483786e407ea9cf1f"
+    },
+    {
+      "path": "vendor/wasm/vision_wasm_nosimd_internal.wasm",
+      "bytes": 9448638,
+      "sha256": "3821ea9b1f7fb8c549ef2a064ef5c85750bf375c545a49fd6eea0df44a95f1f4"
+    }
+  ]
+}

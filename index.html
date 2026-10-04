@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>HandMotion Lab | 手指動作研究</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="coordinates.css"><script src="vendor/jszip.min.js" defer></script><script type="module" src="app.js"></script></head>
+<body><header><div><h1>HandMotion Lab</h1><span>手指動作研究 / 単眼ベースライン v0.2</span></div><strong class="privacy"><img src="vendor/icons/video-off.svg" alt="">映像は録画していません</strong></header>
+<main><section class="workspace"><div class="toolbar"><strong id="status" role="status" aria-live="polite">待機中</strong><span id="sourceTime">0.00 s</span><button id="fullscreen" class="icon" title="全画面表示" aria-label="全画面表示"><img src="vendor/icons/maximize.svg" alt=""></button></div>
+<div class="views"><section class="view"><h2>映像・推定ランドマーク</h2><div class="image-stage"><canvas id="overlay" width="960" height="540" aria-label="映像とランドマーク"></canvas><div id="empty">入力待ち</div></div><div class="view-caption"><span id="dimensions">未入力</span><span id="detected">検出 0 手</span></div></section>
+<section class="view"><h2>相対3D <span>モデル推定 / 実測ではない</span></h2><div id="threeView" aria-label="手の相対3D表示"></div>
+<div class="axis-legend"><span class="axis-x">X</span><span class="axis-y">Y</span><span class="axis-z">Z</span><span>目盛: mm換算（精度保証なし）</span></div>
+<div class="view-controls"><label>手<select id="handSlot"><option value="0">スロット 1</option><option value="1">スロット 2</option></select></label><label>原点<select id="coordinateOrigin"><option value="wrist">手首 = 0</option><option value="model">モデル原点（CSVと同じ）</option></select></label>
+<label>視点<select id="viewPreset"><option value="free">自由視点</option><option value="front">正面</option><option value="back">背面</option><option value="right">右側</option><option value="left">左側</option><option value="top">上</option><option value="bottom">下</option></select></label><button id="reset3d" title="3D視点を戻す">視点リセット</button>
+<label>左右回転 <output id="yawValue">20°</output><input id="yaw" type="range" min="0" max="360" value="20" aria-label="左右回転"></label><label>上下回転 <output id="pitchValue">15°</output><input id="pitch" type="range" min="0" max="360" value="15" aria-label="上下回転"></label>
+<label class="zoom-control">視点距離<input id="zoom" type="range" min="28" max="90" value="58" aria-label="3D視点距離"></label></div>
+<div class="coordinates"><label>参照点<select id="joint"></select></label><div class="coordinate-values"><span class="axis-x">X <output id="coordX">--</output></span><span class="axis-y">Y <output id="coordY">--</output></span><span class="axis-z">Z <output id="coordZ">--</output></span></div><p id="coordinateStatus">未検出 / モデル相対値（mm換算）</p></div>
+<p class="note">原点は手とともに移動します。値は身体の固定座標や押し込み量ではありません。正面視点では +Xが右、+Yが下、+Zが画面の奥です。映像の反転チェックは3Dには適用しません。</p></section></div>
+<div class="measurements"><div><span>押し込み量</span><strong>未計測 <small>mm</small></strong></div><div><span>処理フレーム</span><strong id="frameCount">0</strong></div><div><span>1手以上の検出率</span><strong id="coverage">--</strong></div><div><span>撮影・検出QC</span><strong id="qcState">--</strong></div></div>
+<p class="caution">検出率は精度ではありません。3D表示はモデルの推定形状です。反射・隠れ・接触部の誤推定は、QCで全て検出できるわけではありません。</p>
+<details class="interpretation"><summary>相対3Dと推定性能について</summary><p>3Dの視点回転は、同じ推定座標を別の方向から描く処理です。裏側へ回しても新しい観測や追加推定は行わず、隠れた指の正確さは改善しません。</p><p>推定モデルはGoogle MediaPipe Hand Landmarkerのままです。独自の再学習や精度向上を実証した変更はありません。追加したのは手元ROI、欠測・撮影QC、座標保存、3Dの確認機能です。</p><p>座標は各フレームの推定値です。左右分類スコアは関節の精度ではなく、スロットも永続IDではありません。値の小数表示は測定精度を意味しません。</p></details>
+<div id="error" role="alert" hidden></div><div id="progress"><progress id="progressBar" max="1" value="0"></progress><span id="progressText">未開始</span></div>
+<section class="export"><h2>計測結果</h2><div class="actions"><button id="zip" disabled><img src="vendor/icons/download.svg" alt="">結果ZIP</button><button id="csv" disabled>座標CSV</button><button id="summary" disabled>Summary JSON</button></div><p>座標は計測中だけメモリに蓄積します。映像・音声の保存と外部送信は行いません。最大3,000フレームで停止します。</p></section>
+<section class="next"><h2>圧・押し込み量との統合</h2><p>圧機器の仕様確認待ち。時刻・圧単位・センサー配置・接触面の基準が未定のため、圧からの奥行き換算と立体的な重ね合わせは未実装です。</p><a href="STRATEGY.md" target="_blank" rel="noopener">高精度化の開発戦略</a> / <a href="README.md" target="_blank" rel="noopener">使い方と座標の定義</a></section></section>
+<aside><fieldset id="settings"><legend>入力・撮影条件</legend><label>入力<select id="inputMode"><option value="camera">USB / PCカメラ</option><option value="video">動画ファイル</option><option value="demo">合成動作デモ（実測ではない）</option></select></label>
+<div id="cameraOptions"><label>カメラ<select id="camera"><option value="">既定のカメラ</option></select></label><button id="refresh">カメラ一覧を更新</button></div>
+<label id="videoOptions" hidden>動画<input id="file" type="file" accept="video/*"></label>
+<label>計測頻度 / sample fps<input id="fps" type="number" min="1" max="30" step="1" value="10"></label>
+<label>映す手の数<select id="expected"><option value="1">1手</option><option value="2">2手</option></select></label>
+<label>解析範囲<select id="roiScale"><option value="1">全体</option><option value="0.75">75%</option><option value="0.5">50%・手元拡大</option></select></label>
+<label>範囲の中心・横<input id="roiX" type="range" min="0" max="100" value="50"></label><label>範囲の中心・縦<input id="roiY" type="range" min="0" max="100" value="50"></label>
+<label>手袋条件<select id="glove"><option value="unknown">未記録</option><option value="bare">素手</option><option value="gloved">手袋あり</option></select></label>
+<label>撮影条件メモ<input id="notes" maxlength="160" placeholder="手袋材質・照明など（個人名なし）"></label></fieldset>
+<div class="actions primary-actions"><button id="start"><img src="vendor/icons/camera.svg" alt="">推定開始</button><button id="stop" disabled><img src="vendor/icons/square.svg" alt="">停止</button></div>
+<label class="check"><input id="mirror" type="checkbox">映像のみ左右反転表示</label>
+<p class="note">表示だけ反転します。CSVは元映像の座標です。左右判定はモデル出力で、手の個体IDではありません。</p>
+<div class="divider"><h2>撮影の確認</h2><ul><li>指先まで映る距離・画角</li><li>拡散した照明、白飛びを避ける</li><li>手袋のしわ・反射と指の重なり</li><li>カメラを固定し、背景を簡素に</li></ul><p class="note">解析範囲を狭めると手の画素比率が上がりますが、見えない指を復元したり精度を保証するものではありません。</p></div></aside></main>
+<video id="video" muted playsinline hidden></video><footer>研究開発用 / 精度未検証 / ブラウザ内処理 / 医学的判断には使用しません</footer></body></html>
