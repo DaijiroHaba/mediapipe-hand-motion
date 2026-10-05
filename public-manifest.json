@@ -1,10 +1,13 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "releaseDate": "2026-10-05",
+  "site": "https://daijirohaba.github.io/mediapipe-hand-motion/",
+  "dataProcessing": "user browser; no upload endpoint",
   "files": [
     {
       "path": "index.html",
-      "bytes": 8602,
-      "sha256": "c981b52712984f8a98664ce26ae69acfc941722071574cd15c7477d662ca9a60"
+      "bytes": 8922,
+      "sha256": "37bb2b9d79e8f23d1a5de1d5271769b2f19ff491b256a21e9c92e22f789c0def"
     },
     {
       "path": "style.css",
@@ -15,6 +18,11 @@
       "path": "coordinates.css",
       "bytes": 1491,
       "sha256": "eefe13bae17260231e55f5c541ec9c85502e29979e9aa182c1a888ac4d65d673"
+    },
+    {
+      "path": "navigation.css",
+      "bytes": 307,
+      "sha256": "96786e203efe12c1ac97141102a0cfa028e0082297c74baf2f1fc70e1dd48d8d"
     },
     {
       "path": "app.js",
@@ -42,6 +50,91 @@
       "sha256": "715393d66bef9e52f741407846cdee563cc7abf4c374c3a1935fb744e6e1cb68"
     },
     {
+      "path": "multicamera.html",
+      "bytes": 5258,
+      "sha256": "5e92c2187ed16b25431e3683a8308a887036f5e5fed567346958d2ee0c40a384"
+    },
+    {
+      "path": "multicamera.css",
+      "bytes": 2825,
+      "sha256": "31ee338b40fb38be7b964f2c81f84ab906441f7c3f071acdbf4dfb1a01e657da"
+    },
+    {
+      "path": "multicamera.js",
+      "bytes": 20183,
+      "sha256": "952ee68afaa431ea2a9803fa85bd163d3a8e955b6284c0dbcb8fa007d71ae5d4"
+    },
+    {
+      "path": "multicamera-core.mjs",
+      "bytes": 2363,
+      "sha256": "5136ec698112d7cd59bd91f773484e4d8b5d3ce95860f137bcdfcb14b52808df"
+    },
+    {
+      "path": "README_MULTICAMERA.md",
+      "bytes": 6862,
+      "sha256": "d9e0493c8730cbb63f9c4e1ba7225ffbe7ed84b977d853734467fed4eaa0e705"
+    },
+    {
+      "path": "fusion.html",
+      "bytes": 6098,
+      "sha256": "a9383509ad941cc706929803b75b32ad255a9a62c7de504365c93580902ebf94"
+    },
+    {
+      "path": "fusion.css",
+      "bytes": 3358,
+      "sha256": "4ae2be74745052beea89dff014fb1dcd123e96f38372149863a8a3310c34dc1a"
+    },
+    {
+      "path": "fusion.js",
+      "bytes": 23026,
+      "sha256": "3ca7cd6b2f5310e446769050682ad3560d16f9ae477f0dc28efa6e286557a0f5"
+    },
+    {
+      "path": "fusion-core.mjs",
+      "bytes": 7864,
+      "sha256": "caac012ea1793c7bc0e3045ea05a8f854fec88dd5f74ddb4f63e0dc5b403169b"
+    },
+    {
+      "path": "fusion-calibration.mjs",
+      "bytes": 6935,
+      "sha256": "5fb0811731647f061b73a3f34d5f307458443fb4c9942a1d56ec1daecacb3ba7"
+    },
+    {
+      "path": "fusion-view.mjs",
+      "bytes": 3707,
+      "sha256": "d900facba7f12da4068d1c28b52ebe3d04a8deb6d046875af167bce645a42242"
+    },
+    {
+      "path": "calibration-worker.js",
+      "bytes": 552,
+      "sha256": "0c79a47892f4f8d9218dc3455591f30981888f78665795919775e1febf52d3e9"
+    },
+    {
+      "path": "calibration-board.html",
+      "bytes": 806,
+      "sha256": "03a4737351595a3db36da98ec878d89807051f50ac2abf264b40a42ad0effeb6"
+    },
+    {
+      "path": "calibration-board.css",
+      "bytes": 380,
+      "sha256": "3de89d47b47dde58f1121636e43479f6b5f580164eb870725411421168a2f3fd"
+    },
+    {
+      "path": "calibration-board.mjs",
+      "bytes": 458,
+      "sha256": "e863c5a63f2aa386884a2df183be19203b2a428ad2e8f0373f127cdb8e32c47a"
+    },
+    {
+      "path": "README_FUSION.md",
+      "bytes": 12346,
+      "sha256": "11e5c7857737d485aaf1c6f9e58aff3c58f49853110d4d92e7e0b0ff2fc483c7"
+    },
+    {
+      "path": "SHARE_MESSAGE_JA.txt",
+      "bytes": 1350,
+      "sha256": "28d9d268f7ce0d24a458a4437add7c68bf4d88e426b34973e1023a3974e63e49"
+    },
+    {
       "path": "STRATEGY.md",
       "bytes": 8463,
       "sha256": "d33aa4df7de2b4ad83c0c5e30c8492bbbc678428b34cf0c384b8b3e01279b79f"
@@ -60,6 +153,51 @@
       "path": "DEPENDENCIES.json",
       "bytes": 4368,
       "sha256": "921a0d116cdf78a6c2227469c2245da8569300c58a649d49b7d1c23ab0a4b3a9"
+    },
+    {
+      "path": "vendor/opencv-4.11.0.js",
+      "bytes": 11386540,
+      "sha256": "5ad229d2666fce6803a3af4a569121bd6da8d09d5c164dbafb0d7f758460c25e"
+    },
+    {
+      "path": "vendor/OPENCV_4_11_LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "vendor/OPENCV_DEPENDENCY.json",
+      "bytes": 1163,
+      "sha256": "e36b1435f030370d07cf822394fd93913369474cba423d7dc8ed399cf701b5a5"
+    },
+    {
+      "path": "camera_setup_20261005/guide.html",
+      "bytes": 7711,
+      "sha256": "fce970cf79373c7340afc3a9489c3654d044e53530df7d770878dccc3daa9d77"
+    },
+    {
+      "path": "camera_setup_20261005/guide.css",
+      "bytes": 1958,
+      "sha256": "93907f8115a8a635f7265ce728263b637739bf9129fb846a752c33c66688389f"
+    },
+    {
+      "path": "camera_setup_20261005/camera_setup.png",
+      "bytes": 1781545,
+      "sha256": "aebb5559a60bf27241edd9fc22ebf5872561aa3d64445cabfb1268395658302f"
+    },
+    {
+      "path": "camera_setup_20261005/charuco_6x8_25mm.png",
+      "bytes": 95127,
+      "sha256": "972644ee3db10666a65fb0f8c14e72b6d4ddff2a31ce6a72a37beb8a47f0749c"
+    },
+    {
+      "path": "camera_setup_20261005/CHARUCO_A4_25mm.pdf",
+      "bytes": 137628,
+      "sha256": "5e7ca8bfb7a5de04ccc13b888303174c8415c4e3b6549c1024e38c9593a2d256"
+    },
+    {
+      "path": "camera_setup_20261005/CAMERA_SETUP_GUIDE_JA.pdf",
+      "bytes": 2532539,
+      "sha256": "696c448251bb8c797c96dc5016a7966cadfcda04c47e1f08266b3c12b4253c68"
     },
     {
       "path": "models/hand_landmarker.task",
@@ -163,8 +301,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2847,
-      "sha256": "43228c45a3b9ce7b88c46eb91c0cf5a4f2297ba5e5e09a4e95eba55c65872ffb"
+      "bytes": 6011,
+      "sha256": "245746acddcc01fc90d19f512f739e71abf02c7bb67f0138f69fa5764f7c9bcd"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "package": "@techstark/opencv-js",
+  "packageVersion": "4.11.0-release.1",
+  "runtimeVersionVerified": "OpenCV 4.11.0",
+  "source": "https://cdn.jsdelivr.net/npm/@techstark/opencv-js@4.11.0-release.1/dist/opencv.js",
+  "upstreamRepository": "https://github.com/TechStark/opencv-js",
+  "localFile": "opencv-4.11.0.js",
+  "bytes": 11386540,
+  "sha256": "5ad229d2666fce6803a3af4a569121bd6da8d09d5c164dbafb0d7f758460c25e",
+  "license": "Apache-2.0",
+  "licenseFile": "OPENCV_4_11_LICENSE",
+  "licenseSource": "https://raw.githubusercontent.com/opencv/opencv/4.11.0/LICENSE",
+  "licenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "retrievedDate": "2026-10-05",
+  "userPermission": "Explicit permission to download and bundle public calibration libraries",
+  "distributionNote": "Third-party public package mirror. Direct docs.opencv.org request was challenged; no access-control bypass attempted.",
+  "runtimeNetwork": "Same-origin local file; no research images uploaded",
+  "cspNote": "This build uses dynamic Function during Embind initialization and requires unsafe-eval. Same-origin script/connect restrictions retained."
+}
