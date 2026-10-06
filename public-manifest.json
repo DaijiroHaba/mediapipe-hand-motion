@@ -1,13 +1,13 @@
 {
-  "version": "0.3.0",
-  "releaseDate": "2026-10-05",
+  "version": "0.4.0",
+  "releaseDate": "2026-10-06",
   "site": "https://daijirohaba.github.io/mediapipe-hand-motion/",
   "dataProcessing": "user browser; no upload endpoint",
   "files": [
     {
       "path": "index.html",
-      "bytes": 8922,
-      "sha256": "37bb2b9d79e8f23d1a5de1d5271769b2f19ff491b256a21e9c92e22f789c0def"
+      "bytes": 8983,
+      "sha256": "5fb97ea906f24fbf563945a44e76a244d4d5767db8f341d7bb792ad90054cbf2"
     },
     {
       "path": "style.css",
@@ -51,8 +51,8 @@
     },
     {
       "path": "multicamera.html",
-      "bytes": 5258,
-      "sha256": "5e92c2187ed16b25431e3683a8308a887036f5e5fed567346958d2ee0c40a384"
+      "bytes": 5318,
+      "sha256": "45fd08deae5261d28d879afd99884f40d1fc1de43fa1dd0c751351007a033de8"
     },
     {
       "path": "multicamera.css",
@@ -76,8 +76,8 @@
     },
     {
       "path": "fusion.html",
-      "bytes": 6098,
-      "sha256": "a9383509ad941cc706929803b75b32ad255a9a62c7de504365c93580902ebf94"
+      "bytes": 6161,
+      "sha256": "0f57e0e3e01996c61a7083f554ac3d2da0981823500027bef7b3eced4132d8a7"
     },
     {
       "path": "fusion.css",
@@ -301,8 +301,33 @@
     },
     {
       "path": "README.md",
-      "bytes": 6011,
-      "sha256": "245746acddcc01fc90d19f512f739e71abf02c7bb67f0138f69fa5764f7c9bcd"
+      "bytes": 6481,
+      "sha256": "a39bd598043f406f6bb25fdebf467a3a593aecd99cf5ca4591d61854a38246f3"
+    },
+    {
+      "path": "file-video.mjs",
+      "bytes": 3901,
+      "sha256": "a080caea1e9d7def32cde87f3d295202f82224ddfe4ad1a3f62925af9e9b48ee"
+    },
+    {
+      "path": "recorded.html",
+      "bytes": 4489,
+      "sha256": "522e06e9f37fb2d67645826a34ab9c8da55caf88758fc39282c56213acc02531"
+    },
+    {
+      "path": "recorded.js",
+      "bytes": 14021,
+      "sha256": "394929104f12e524233b30644d2fd13518897069dd826dc5191e9d75eb0fcc2e"
+    },
+    {
+      "path": "recorded.css",
+      "bytes": 554,
+      "sha256": "a9cf819af5c3d4c435168fdb382b357b2c5a21556a82f32a30ccefa7311c084f"
+    },
+    {
+      "path": "README_RECORDED.md",
+      "bytes": 3177,
+      "sha256": "0f379e1701b5a7e08365d4b446cc86ee33d78d886c5db08a486126be2ff7d659"
     }
   ]
 }

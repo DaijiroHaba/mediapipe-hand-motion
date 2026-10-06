@@ -1,4 +1,6 @@
-# HandMotion Lab / HandCamera v0.3
+# HandMotion Lab / HandCamera v0.4
+
+2026-10-06: 各画面から「既存動画の解析」へ移動できます。単眼の相対3D、1〜3本の各視点解析、校正JSONと時刻オフセットを使用した複数動画の共通3Dに対応。校正3D画面の単眼入力はモデル相対3Dです。[動画の使い方](https://github.com/DaijiroHaba/mediapipe-hand-motion/blob/main/README_RECORDED.md)。動画入力では録画・アップロードを行いません。URLはそのままです。
 
 公開URL: https://daijirohaba.github.io/mediapipe-hand-motion/
 
